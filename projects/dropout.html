@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dropout Prediction · Drashti Kadakia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root { --cream:#faf8f4; --navy:#0f1f3d; --accent:#c9a84c; --text:#1a1a2e; --muted:#6b7280; --border:rgba(0,0,0,0.08); --white:#ffffff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); }
+nav { padding:0 3rem; height:64px; display:flex; align-items:center; justify-content:space-between; background:var(--white); border-bottom:1px solid var(--border); }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--navy); text-decoration:none; }
+.back-btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.82rem; color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+.back-btn:hover { color:var(--navy); }
+.hero { background:var(--cream2,#f3f0ea); border-bottom:1px solid var(--border); padding:5rem 3rem; }
+.hero-inner { max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+.proj-type { font-size:0.75rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:300; color:var(--navy); line-height:1.15; margin-bottom:1.25rem; }
+.hero-desc { font-size:1rem; color:var(--muted); line-height:1.85; font-weight:300; }
+.hero-viz { }
+.content { max-width:900px; margin:0 auto; padding:5rem 3rem; }
+.section { margin-bottom:4rem; }
+.section-label { font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem; }
+h2 { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:400; color:var(--navy); margin-bottom:1.5rem; }
+p { font-size:1.05rem; color:var(--muted); line-height:1.9; font-weight:300; margin-bottom:1.25rem; }
+.metrics-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin:2rem 0; }
+.metric { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:1.5rem; text-align:center; }
+.metric-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:var(--navy); }
+.metric-label { font-size:0.8rem; color:var(--muted); margin-top:0.4rem; font-weight:300; }
+.model-compare { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin:1.5rem 0; }
+.model-card { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:1.75rem; }
+.model-card.winner { border-color:var(--accent); }
+.model-name { font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:0.75rem; }
+.model-acc { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:600; color:var(--navy); }
+.model-auc { font-size:0.88rem; color:var(--muted); margin-top:0.25rem; }
+.winner-badge { display:inline-block; font-size:0.68rem; padding:0.2rem 0.6rem; background:rgba(201,168,76,0.12); color:var(--accent); border-radius:2px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:0.75rem; }
+.findings { display:flex; flex-direction:column; gap:0.75rem; margin:1.5rem 0; }
+.finding { display:flex; align-items:flex-start; gap:0.75rem; padding:1rem 1.25rem; background:var(--white); border:1px solid var(--border); border-radius:6px; }
+.finding-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); flex-shrink:0; margin-top:0.35rem; }
+.finding-text { font-size:0.95rem; color:var(--muted); font-weight:300; line-height:1.6; }
+.screenshots { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:2rem 0; }
+.screenshots img { width:100%; border-radius:6px; border:1px solid var(--border); }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
+.tag { font-size:0.78rem; padding:0.3rem 0.85rem; border:1px solid var(--border); border-radius:2px; color:var(--muted); }
+.github-link { display:inline-flex; align-items:center; gap:0.5rem; padding:0.9rem 2rem; background:var(--navy); color:white; text-decoration:none; border-radius:2px; font-size:0.82rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; margin-top:1.5rem; transition:background 0.3s; }
+.github-link:hover { background:var(--accent); color:var(--navy); }
+footer { background:var(--navy); color:rgba(255,255,255,0.2); text-align:center; padding:1.5rem; font-size:0.8rem; }
+@media(max-width:768px) { .hero-inner,.model-compare,.screenshots { grid-template-columns:1fr; } .metrics-grid { grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index_v3.html" class="nav-logo">Drashti Ashish Kadakia</a>
+  <a href="../index_v3.html#projects" class="back-btn">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="proj-type">Machine Learning · 2024</div>
+      <h1>Student Dropout and Graduation Prediction</h1>
+      <p class="hero-desc">A machine learning pipeline analyzing 3,300+ student records to predict graduation versus dropout outcomes, identifying the key financial and enrollment factors that drive student retention risk.</p>
+    </div>
+    <div class="hero-viz">
+      <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.3"/>
+        <circle cx="100" cy="100" r="45" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.2"/>
+        <circle cx="100" cy="100" r="20" fill="#c9a84c" opacity="0.35"/>
+        <circle cx="210" cy="115" r="62" fill="none" stroke="#0f1f3d" stroke-width="1.5" opacity="0.12"/>
+        <circle cx="210" cy="115" r="40" fill="none" stroke="#0f1f3d" stroke-width="1" opacity="0.08"/>
+        <circle cx="210" cy="115" r="16" fill="#0f1f3d" opacity="0.18"/>
+        <line x1="20" y1="195" x2="280" y2="195" stroke="#0f1f3d" stroke-width="0.5" opacity="0.12"/>
+        <line x1="20" y1="30" x2="20" y2="195" stroke="#0f1f3d" stroke-width="0.5" opacity="0.12"/>
+        <text x="85" y="225" fill="rgba(201,168,76,0.5)" font-size="9" font-family="sans-serif">Graduate</text>
+        <text x="193" y="225" fill="rgba(15,31,61,0.35)" font-size="9" font-family="sans-serif">Dropout</text>
+        <text x="20" y="22" fill="rgba(15,31,61,0.3)" font-size="8" font-family="sans-serif" letter-spacing="1">PREDICTION DISTRIBUTION</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <div class="section-label">Scale</div>
+    <h2>Project Scope</h2>
+    <div class="metrics-grid">
+      <div class="metric"><div class="metric-num">3,300+</div><div class="metric-label">Student records analyzed</div></div>
+      <div class="metric"><div class="metric-num">8</div><div class="metric-label">Features used for prediction</div></div>
+      <div class="metric"><div class="metric-num">2</div><div class="metric-label">Models compared (kNN and Logistic Regression)</div></div>
+      <div class="metric"><div class="metric-num">75.5%</div><div class="metric-label">Best model accuracy achieved</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Methodology</div>
+    <h2>How the Models Were Built</h2>
+    <p>The project used Orange Data Mining to build a visual machine learning pipeline. Raw student data was loaded, features were selected, outliers removed, and missing values imputed before training.</p>
+    <p>Two model families were built and evaluated independently using separate data samplers with stratified 66/34 train/test splits. Each model was evaluated on accuracy, AUC, F1 score, precision, and recall.</p>
+    <div class="model-compare">
+      <div class="model-card">
+        <div class="model-name">k-Nearest Neighbors</div>
+        <div class="model-acc">73.3%</div>
+        <div class="model-auc">AUC: 0.767</div>
+      </div>
+      <div class="model-card winner">
+        <div class="winner-badge">Best Model</div>
+        <div class="model-name">Logistic Regression</div>
+        <div class="model-acc">75.5%</div>
+        <div class="model-auc">AUC: 0.814 · Precision: 74.1% · Recall: 75.5%</div>
+      </div>
+    </div>
+    <p>Logistic Regression correctly predicted 1,493 graduates and 506 dropouts out of 2,649 test records, outperforming kNN across all evaluation metrics.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Results</div>
+    <h2>Key Findings</h2>
+    <div class="findings">
+      <div class="finding"><div class="finding-dot"></div><div class="finding-text">Students with tuition fees paid up to date showed overwhelmingly higher graduation rates, making financial status the strongest single predictor of outcome.</div></div>
+      <div class="finding"><div class="finding-dot"></div><div class="finding-text">Scholarship holders were significantly more likely to graduate, reinforcing the protective effect of financial support on student retention.</div></div>
+      <div class="finding"><div class="finding-dot"></div><div class="finding-text">Evening class students showed a slightly higher dropout tendency compared to daytime students, suggesting scheduling flexibility as a risk factor.</div></div>
+      <div class="finding"><div class="finding-dot"></div><div class="finding-text">After age 35, dropout tendency increased noticeably, pointing to the added pressures faced by non-traditional students.</div></div>
+    </div>
+  </div>
+
+
+
+  <div class="section">
+    <div class="section-label">Recommendations</div>
+    <h2>Institutional Implications</h2>
+    <p>Based on these findings, institutions should proactively reach out to students with outstanding tuition fees early in the semester, expand scholarship availability to reduce financial dropout risk, implement dedicated support programs for evening and part-time students, and use predictive tools to flag at-risk students for early intervention.</p>
+
+    <div class="tags">
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Orange Data Mining</span>
+      <span class="tag">Logistic Regression</span>
+      <span class="tag">kNN</span>
+      <span class="tag">Data Visualization</span>
+      <span class="tag">Predictive Analytics</span>
+      <span class="tag">Classification</span>
+      <span class="tag">Model Evaluation</span>
+    </div>
+    <a href="https://github.com/drashtiashishkadakia/student-dropout-prediction" target="_blank" class="github-link">View on GitHub →</a>
+  </div>
+</div>
+<footer><p>© 2026 Drashti Ashish Kadakia</p></footer>
+</body>
+</html>

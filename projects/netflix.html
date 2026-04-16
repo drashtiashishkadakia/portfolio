@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Equity Analysis · Drashti Kadakia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root { --cream:#faf8f4; --navy:#0f1f3d; --accent:#c9a84c; --text:#1a1a2e; --muted:#6b7280; --border:rgba(0,0,0,0.08); --white:#ffffff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); }
+nav { padding:0 3rem; height:64px; display:flex; align-items:center; justify-content:space-between; background:var(--white); border-bottom:1px solid var(--border); }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--navy); text-decoration:none; }
+.back-btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.82rem; color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+.back-btn:hover { color:var(--navy); }
+.hero { background:#1a1a2e; padding:5rem 3rem; }
+.hero-inner { max-width:900px; margin:0 auto; }
+.proj-type { font-size:0.75rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:white; line-height:1.1; margin-bottom:1.5rem; }
+.hero-desc { font-size:1.1rem; color:rgba(255,255,255,0.55); line-height:1.85; max-width:700px; font-weight:300; }
+.viz-section { background:#1a1a2e; padding:0 3rem 4rem; }
+.viz-inner { max-width:900px; margin:0 auto; }
+.viz-box { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:2rem; }
+.content { max-width:900px; margin:0 auto; padding:5rem 3rem; }
+.section { margin-bottom:4rem; }
+.section-label { font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem; }
+h2 { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:400; color:var(--navy); margin-bottom:1.5rem; }
+p { font-size:1.05rem; color:var(--muted); line-height:1.9; font-weight:300; margin-bottom:1.25rem; }
+.metrics-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin:2rem 0; }
+.metric { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:1.5rem; }
+.metric-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:var(--navy); }
+.metric-change { font-size:0.82rem; color:#059669; font-weight:500; margin-top:0.25rem; }
+.metric-label { font-size:0.8rem; color:var(--muted); margin-top:0.25rem; font-weight:300; }
+.statements { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin:1.5rem 0; }
+.statement { background:var(--navy); color:white; padding:1.25rem; border-radius:6px; text-align:center; }
+.statement-title { font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:0.4rem; }
+.statement-desc { font-size:0.85rem; color:rgba(255,255,255,0.55); font-weight:300; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
+.tag { font-size:0.78rem; padding:0.3rem 0.85rem; border:1px solid var(--border); border-radius:2px; color:var(--muted); }
+.request-link { display:inline-flex; align-items:center; gap:0.5rem; padding:0.9rem 2rem; background:var(--navy); color:white; text-decoration:none; border-radius:2px; font-size:0.82rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; margin-top:1.5rem; transition:background 0.3s; }
+.request-link:hover { background:var(--accent); color:var(--navy); }
+footer { background:var(--navy); color:rgba(255,255,255,0.2); text-align:center; padding:1.5rem; font-size:0.8rem; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index_v3.html" class="nav-logo">Drashti Ashish Kadakia</a>
+  <a href="../index_v3.html#projects" class="back-btn">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="proj-type">Financial Analysis · January 2025 – May 2025</div>
+    <h1>Equity Analysis – Netflix (NFLX)</h1>
+    <p class="hero-desc">A comprehensive three-year financial statement analysis of Netflix evaluating profitability, liquidity, leverage, and cash flow performance from 2022 to 2024, with strategic recommendations for investors and management.</p>
+  </div>
+</div>
+
+<div class="viz-section">
+  <div class="viz-inner">
+    <div class="viz-box">
+      <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+        <text x="20" y="22" fill="rgba(201,168,76,0.5)" font-size="10" font-family="sans-serif" letter-spacing="2">NET MARGIN · ROA · FREE CASH FLOW · 2022 TO 2024</text>
+        <rect x="60" y="100" width="60" height="75" fill="#c9a84c" opacity="0.6" rx="2"/>
+        <rect x="160" y="75" width="60" height="100" fill="#c9a84c" opacity="0.75" rx="2"/>
+        <rect x="260" y="45" width="60" height="130" fill="#c9a84c" opacity="0.9" rx="2"/>
+        <rect x="400" y="110" width="60" height="65" fill="#4a7fc1" opacity="0.6" rx="2"/>
+        <rect x="500" y="80" width="60" height="95" fill="#4a7fc1" opacity="0.75" rx="2"/>
+        <rect x="600" y="40" width="60" height="135" fill="#4a7fc1" opacity="0.9" rx="2"/>
+        <text x="75" y="190" fill="rgba(201,168,76,0.6)" font-size="9" font-family="sans-serif">2022</text>
+        <text x="175" y="190" fill="rgba(201,168,76,0.6)" font-size="9" font-family="sans-serif">2023</text>
+        <text x="275" y="190" fill="rgba(201,168,76,0.6)" font-size="9" font-family="sans-serif">2024</text>
+        <text x="415" y="190" fill="rgba(74,127,193,0.6)" font-size="9" font-family="sans-serif">2022</text>
+        <text x="515" y="190" fill="rgba(74,127,193,0.6)" font-size="9" font-family="sans-serif">2023</text>
+        <text x="615" y="190" fill="rgba(74,127,193,0.6)" font-size="9" font-family="sans-serif">2024</text>
+        <text x="140" y="170" fill="rgba(201,168,76,0.4)" font-size="8" font-family="sans-serif">Net Margin</text>
+        <text x="480" y="170" fill="rgba(74,127,193,0.4)" font-size="8" font-family="sans-serif">ROA</text>
+        <line x1="20" y1="178" x2="840" y2="178" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <div class="section-label">Overview</div>
+    <h2>The Analysis</h2>
+    <p>This project analyzed three years of Netflix's publicly available financial statements to evaluate the company's financial health, profitability trajectory, and long-term sustainability. The goal was to produce a structured equity analysis similar to what a financial analyst would prepare for investor reporting or internal strategy review.</p>
+    <div class="statements">
+      <div class="statement"><div class="statement-title">Income Statement</div><div class="statement-desc">Profitability, margins, EPS trends</div></div>
+      <div class="statement"><div class="statement-title">Balance Sheet</div><div class="statement-desc">Assets, liabilities, equity structure</div></div>
+      <div class="statement"><div class="statement-title">Cash Flow</div><div class="statement-desc">Operating, investing, free cash flow</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Key Findings</div>
+    <h2>What the Numbers Show</h2>
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-num">14% → 22%</div>
+        <div class="metric-change">+8 percentage points</div>
+        <div class="metric-label">Net profit margin expansion (2022 to 2024)</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">9% → 16%</div>
+        <div class="metric-change">+7 percentage points</div>
+        <div class="metric-label">Return on assets growth showing improved efficiency</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">$1.6B → $6.9B</div>
+        <div class="metric-change">+331% increase</div>
+        <div class="metric-label">Free cash flow expansion from 2022 to 2024</div>
+      </div>
+    </div>
+    <p>The analysis also evaluated liquidity ratios (current ratio improved from 1.17 to 1.22), leverage (debt-to-equity declined from 1.34 to 1.17 indicating improving balance sheet health), and cash flow margins (from 5.1% to 18.9%).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Recommendations</div>
+    <h2>Strategic Insights</h2>
+    <p>Based on the financial analysis, key recommendations were presented around debt management given Netflix's continued reliance on debt financing, revenue diversification through advertising and live content strategies, and sustaining margin improvements while investing in content production.</p>
+    <p>The analysis was presented to class stakeholders using structured financial dashboards built in Tableau, translating complex ratio analysis into a clear business narrative.</p>
+
+    <div class="tags">
+      <span class="tag">Financial Statement Analysis</span>
+      <span class="tag">Ratio Analysis</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Equity Research</span>
+      <span class="tag">Profitability Analysis</span>
+      <span class="tag">Liquidity Analysis</span>
+      <span class="tag">Cash Flow Analysis</span>
+    </div>
+    <a href="mailto:drashtiashishkadakia@gmail.com" class="request-link">Request Full Report →</a>
+  </div>
+</div>
+<footer><p>© 2026 Drashti Ashish Kadakia</p></footer>
+</body>
+</html>

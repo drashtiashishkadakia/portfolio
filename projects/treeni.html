@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treeni – ESG Forecasting · Drashti Kadakia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root { --cream:#faf8f4; --navy:#0f1f3d; --accent:#c9a84c; --text:#1a1a2e; --muted:#6b7280; --border:rgba(0,0,0,0.08); --white:#ffffff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); }
+nav { padding:0 3rem; height:64px; display:flex; align-items:center; justify-content:space-between; background:var(--white); border-bottom:1px solid var(--border); }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--navy); text-decoration:none; }
+.back-btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.82rem; color:var(--muted); text-decoration:none; font-weight:500; letter-spacing:0.04em; transition:color 0.2s; }
+.back-btn:hover { color:var(--navy); }
+.hero { background:var(--navy); padding:5rem 3rem; }
+.hero-inner { max-width:900px; margin:0 auto; }
+.proj-type { font-size:0.75rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:white; line-height:1.1; margin-bottom:1.5rem; }
+.hero-desc { font-size:1.1rem; color:rgba(255,255,255,0.55); line-height:1.85; max-width:700px; font-weight:300; }
+.cover-viz { background:var(--navy); padding:0 3rem 4rem; }
+.cover-viz-inner { max-width:900px; margin:0 auto; }
+.viz-box { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:2rem; overflow:hidden; }
+.content { max-width:900px; margin:0 auto; padding:5rem 3rem; }
+.section { margin-bottom:4rem; }
+.section-label { font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem; }
+h2 { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:400; color:var(--navy); margin-bottom:1.5rem; }
+p { font-size:1.05rem; color:var(--muted); line-height:1.9; font-weight:300; margin-bottom:1.25rem; }
+.metrics-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin:2rem 0; }
+.metric { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:1.5rem; text-align:center; }
+.metric-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:var(--navy); }
+.metric-label { font-size:0.8rem; color:var(--muted); margin-top:0.4rem; font-weight:300; }
+.pipeline { display:flex; flex-wrap:wrap; gap:0.75rem; margin:1.5rem 0; }
+.step { background:var(--navy); color:white; font-size:0.82rem; padding:0.5rem 1.1rem; border-radius:2px; font-weight:400; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
+.tag { font-size:0.78rem; padding:0.3rem 0.85rem; border:1px solid var(--border); border-radius:2px; color:var(--muted); }
+.confidential-note { background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); border-radius:8px; padding:1.5rem; margin:2rem 0; }
+.confidential-note p { color:var(--muted); font-size:0.95rem; margin:0; }
+.github-link { display:inline-flex; align-items:center; gap:0.5rem; padding:0.9rem 2rem; background:var(--navy); color:white; text-decoration:none; border-radius:2px; font-size:0.82rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; margin-top:1.5rem; transition:background 0.3s; }
+.github-link:hover { background:var(--accent); color:var(--navy); }
+footer { background:var(--navy); color:rgba(255,255,255,0.2); text-align:center; padding:1.5rem; font-size:0.8rem; margin-top:0; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index_v3.html" class="nav-logo">Drashti Ashish Kadakia</a>
+  <a href="../index_v3.html#projects" class="back-btn">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="proj-type">Capstone Project · Jan 2026 – Present</div>
+    <h1>Treeni – ESG Carbon Emissions Forecasting</h1>
+    <p class="hero-desc">A production-grade multi-series time-series forecasting system predicting Scope 1 and 2 carbon emissions across 30+ facilities for a multinational technology company, built entirely from scratch using Python.</p>
+  </div>
+</div>
+
+<div class="cover-viz">
+  <div class="cover-viz-inner">
+    <div class="viz-box">
+      <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+        <text x="20" y="25" fill="rgba(201,168,76,0.5)" font-size="10" font-family="sans-serif" letter-spacing="2">SCOPE 1 · SCOPE 2 · MULTI-SITE FORECASTING</text>
+        <polyline points="0,160 40,130 80,145 130,100 180,115 230,75 280,90 330,60 380,78 430,48 480,65 530,38 580,52 630,32 680,46 730,28 780,40 830,22 860,35" fill="none" stroke="#c9a84c" stroke-width="2.5" opacity="0.9"/>
+        <polyline points="0,175 40,162 80,168 130,148 180,157 230,132 280,142 330,118 380,128 430,106 480,118 530,96 580,105 630,88 680,97 730,80 780,89 830,74 860,82" fill="none" stroke="#4a7fc1" stroke-width="1.5" opacity="0.6"/>
+        <line x1="530" y1="10" x2="530" y2="190" stroke="rgba(201,168,76,0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="535" y="22" fill="rgba(201,168,76,0.5)" font-size="9" font-family="sans-serif">Forecast →</text>
+        <circle cx="430" cy="48" r="4" fill="#c9a84c"/>
+        <circle cx="530" cy="38" r="4" fill="#c9a84c"/>
+        <circle cx="630" cy="32" r="4" fill="#c9a84c"/>
+        <circle cx="730" cy="28" r="4" fill="#c9a84c"/>
+        <circle cx="830" cy="22" r="4" fill="#c9a84c" opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <div class="section-label">Overview</div>
+    <h2>The Problem</h2>
+    <p>Organizations maintain historical ESG records but often lack reliable methods to project future values for planning, target setting, and sustainability reporting. In many real-world ESG scenarios, independent variables are not available, external drivers are inconsistent, and forecasting must be based strictly on historical time-series patterns.</p>
+    <p>This project builds a pure time-series forecasting system that predicts future values of ESG metrics using only historical observations across multiple scopes, cities, and sites independently.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Scale</div>
+    <h2>Project Scope</h2>
+    <div class="metrics-grid">
+      <div class="metric"><div class="metric-num">30+</div><div class="metric-label">Facilities forecasted</div></div>
+      <div class="metric"><div class="metric-num">7</div><div class="metric-label">Models compared</div></div>
+      <div class="metric"><div class="metric-num">3</div><div class="metric-label">Forecast horizons (6, 12, 24 months)</div></div>
+      <div class="metric"><div class="metric-num">2</div><div class="metric-label">Emission scopes (Scope 1 and 2)</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Methodology</div>
+    <h2>How It Was Built</h2>
+    <p>The full pipeline runs in 5 phases, processing raw ESG data all the way through to Power BI-ready CSV outputs:</p>
+    <div class="pipeline">
+      <div class="step">1. Data Preparation</div>
+      <div class="step">2. Forecasting Models</div>
+      <div class="step">3. Model Evaluation</div>
+      <div class="step">4. Forecast Generation</div>
+      <div class="step">5. Dashboard Visualization</div>
+    </div>
+    <p>Data was cleaned and structured using Pandas and NumPy, handling missing timestamps via forward fill and interpolation, detecting outliers with rolling mean and IQR methods, and applying KNN imputation for gaps. Each metric, scope, city, and site combination was treated as an independent time series.</p>
+    <p>Seven forecasting models were compared per series: Naive, ARIMA, SARIMAX, Holt's Linear Trend, Holt-Winters, Simple Exponential Smoothing, and Facebook Prophet. The best model was selected per series using MAE, RMSE, and MAPE with a chronological train/validation split.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Output</div>
+    <h2>Results and Deliverables</h2>
+    <p>The pipeline exports 12 Power BI-ready CSV files across three granularity levels (state, city, site), including model performance comparisons, backtest results, best-model forecasts, and all-model forecasts with confidence intervals.</p>
+    <p>An interactive Power BI dashboard was built allowing stakeholders to filter by metric, scope, city, and site and compare historical versus forecasted values with confidence bands.</p>
+
+    <div class="confidential-note">
+      <p>The underlying dataset is confidential corporate data and cannot be shared publicly. The forecasting code is available on GitHub with placeholder data references. Full results and methodology are available upon request during interviews.</p>
+    </div>
+
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Pandas / NumPy</span>
+      <span class="tag">Statsmodels</span>
+      <span class="tag">ARIMA / SARIMAX</span>
+      <span class="tag">Facebook Prophet</span>
+      <span class="tag">Holt-Winters</span>
+      <span class="tag">Scikit-learn</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">Jupyter Notebooks</span>
+      <span class="tag">KNN Imputation</span>
+    </div>
+    <a href="https://github.com/drashtiashishkadakia/ESG-emissions-forecasting" target="_blank" class="github-link">View Code on GitHub →</a>
+  </div>
+</div>
+<footer><p>© 2026 Drashti Ashish Kadakia</p></footer>
+</body>
+</html>
