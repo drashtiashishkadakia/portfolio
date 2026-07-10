@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Play Store – Product Health Analysis · Drashti Kadakia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root { --cream:#faf8f4; --navy:#0f1f3d; --accent:#c9a84c; --text:#1a1a2e; --muted:#6b7280; --border:rgba(0,0,0,0.08); --white:#ffffff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); }
+nav { padding:0 3rem; height:64px; display:flex; align-items:center; justify-content:space-between; background:var(--white); border-bottom:1px solid var(--border); }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--navy); text-decoration:none; }
+.back-btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.82rem; color:var(--muted); text-decoration:none; font-weight:500; letter-spacing:0.04em; transition:color 0.2s; }
+.back-btn:hover { color:var(--navy); }
+.hero { background:var(--navy); padding:5rem 3rem; }
+.hero-inner { max-width:900px; margin:0 auto; }
+.proj-type { font-size:0.75rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:white; line-height:1.1; margin-bottom:1.5rem; }
+.hero-desc { font-size:1.1rem; color:rgba(255,255,255,0.55); line-height:1.85; max-width:700px; font-weight:300; }
+.cover-viz { background:var(--navy); padding:0 3rem 4rem; }
+.cover-viz-inner { max-width:900px; margin:0 auto; }
+.viz-box { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:2rem; overflow:hidden; }
+.content { max-width:900px; margin:0 auto; padding:5rem 3rem; }
+.section { margin-bottom:4rem; }
+.section-label { font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem; }
+h2 { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:400; color:var(--navy); margin-bottom:1.5rem; }
+p { font-size:1.05rem; color:var(--muted); line-height:1.9; font-weight:300; margin-bottom:1.25rem; }
+.metrics-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin:2rem 0; }
+.metric { background:var(--white); border:1px solid var(--border); border-radius:8px; padding:1.5rem; text-align:center; }
+.metric-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:var(--navy); }
+.metric-label { font-size:0.8rem; color:var(--muted); margin-top:0.4rem; font-weight:300; }
+.pipeline { display:flex; flex-wrap:wrap; gap:0.75rem; margin:1.5rem 0; }
+.step { background:var(--navy); color:white; font-size:0.82rem; padding:0.5rem 1.1rem; border-radius:2px; font-weight:400; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
+.tag { font-size:0.78rem; padding:0.3rem 0.85rem; border:1px solid var(--border); border-radius:2px; color:var(--muted); }
+.finding-note { background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); border-radius:8px; padding:1.5rem; margin:2rem 0; }
+.finding-note p { color:var(--muted); font-size:0.95rem; margin:0; }
+.github-link { display:inline-flex; align-items:center; gap:0.5rem; padding:0.9rem 2rem; background:var(--navy); color:white; text-decoration:none; border-radius:2px; font-size:0.82rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; margin-top:1.5rem; transition:background 0.3s; }
+.github-link:hover { background:var(--accent); color:var(--navy); }
+footer { background:var(--navy); color:rgba(255,255,255,0.2); text-align:center; padding:1.5rem; font-size:0.8rem; margin-top:0; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">Drashti Ashish Kadakia</a>
+  <a href="../index.html#projects" class="back-btn">← Back to Portfolio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="proj-type">Data Analytics Project · May 2026 – Jul 2026</div>
+    <h1>Google Play Store – Product Health &amp; App Quality Analysis</h1>
+    <p class="hero-desc">An end-to-end analysis of 10,357 Google Play Store apps and 37,427 user reviews, built to identify which app categories carry the highest quality and retention risk using a composite Risk Score across rating, abandonment, and sentiment.</p>
+  </div>
+</div>
+
+<div class="cover-viz">
+  <div class="cover-viz-inner">
+    <div class="viz-box">
+      <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+        <text x="20" y="25" fill="rgba(201,168,76,0.5)" font-size="10" font-family="sans-serif" letter-spacing="2">RATING · ABANDONMENT · SENTIMENT · RISK SCORE</text>
+        <rect x="60" y="120" width="55" height="55" fill="#0f1f3d" opacity="0.85"/>
+        <rect x="140" y="90" width="55" height="85" fill="#c9a84c" opacity="0.9"/>
+        <rect x="220" y="140" width="55" height="35" fill="#0f1f3d" opacity="0.5"/>
+        <rect x="300" y="60" width="55" height="115" fill="#c9a84c" opacity="0.7"/>
+        <rect x="380" y="105" width="55" height="70" fill="#0f1f3d" opacity="0.65"/>
+        <rect x="460" y="40" width="55" height="135" fill="#c9a84c" opacity="1"/>
+        <rect x="540" y="115" width="55" height="60" fill="#0f1f3d" opacity="0.55"/>
+        <rect x="620" y="80" width="55" height="95" fill="#c9a84c" opacity="0.8"/>
+        <rect x="700" y="130" width="55" height="45" fill="#0f1f3d" opacity="0.45"/>
+        <rect x="780" y="95" width="55" height="80" fill="#c9a84c" opacity="0.75"/>
+        <line x1="20" y1="175" x2="840" y2="175" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <div class="section-label">Overview</div>
+    <h2>The Problem</h2>
+    <p>App marketplaces host thousands of apps across dozens of categories, but not all categories are equally healthy. Some carry chronically low ratings, high abandonment, and heavy negative sentiment, while others thrive. Without a structured way to compare categories side by side, it is difficult for a product or business team to know where to focus a limited quality and retention budget.</p>
+    <p>This project builds a full analytics pipeline, from raw data cleaning through SQL analysis to an interactive Power BI dashboard, culminating in a composite Risk Score that ranks all 33 categories by overall health.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Scale</div>
+    <h2>Project Scope</h2>
+    <div class="metrics-grid">
+      <div class="metric"><div class="metric-num">10,357</div><div class="metric-label">Apps analyzed</div></div>
+      <div class="metric"><div class="metric-num">37,427</div><div class="metric-label">User reviews analyzed</div></div>
+      <div class="metric"><div class="metric-num">33</div><div class="metric-label">App categories scored</div></div>
+      <div class="metric"><div class="metric-num">3</div><div class="metric-label">Risk dimensions (rating, abandonment, sentiment)</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Methodology</div>
+    <h2>How It Was Built</h2>
+    <p>The full pipeline runs in three phases, from raw data to a ranked, interactive dashboard:</p>
+    <div class="pipeline">
+      <div class="step">1. Data Cleaning</div>
+      <div class="step">2. SQL Analysis</div>
+      <div class="step">3. Power BI Dashboard</div>
+    </div>
+    <p>Data was cleaned in Excel, removing duplicates, handling missing ratings, and dropping irrelevant columns across both the apps and reviews datasets. SQL queries in SQLite used GROUP BY, CASE WHEN, JOIN, CAST, and REPLACE to build category-level health metrics, update-recency trends, and a full review sentiment breakdown across all 33 categories.</p>
+    <p>A composite Risk Score measure was built in DAX, combining abandonment rate, negative review percentage, and average rating into a single ranked metric, then visualized in a conditional-formatted table alongside supporting charts on a three-page Power BI dashboard.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Dashboard</div>
+    <h2>See It In Action</h2>
+    <p>A three-page interactive Power BI dashboard: an executive-level summary, a category-level deep dive with the ranked Risk Score table, and a written recommendation backed by the data.</p>
+    <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem;">
+      <div>
+        <img src="images/exec-summary.png" alt="Executive Summary dashboard page" style="width:100%;border:1px solid var(--border);border-radius:8px;display:block;">
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;margin-bottom:0;text-align:center;">Executive Summary — portfolio-wide KPIs and the quality-vs-retention risk matrix</p>
+      </div>
+      <div>
+        <img src="images/category-deep-dive.png" alt="Category Deep Dive dashboard page" style="width:100%;border:1px solid var(--border);border-radius:8px;display:block;">
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;margin-bottom:0;text-align:center;">Category Deep Dive — the ranked Risk Score table with conditional formatting</p>
+      </div>
+      <div>
+        <img src="images/recommendations.png" alt="Recommendations dashboard page" style="width:100%;border:1px solid var(--border);border-radius:8px;display:block;">
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;margin-bottom:0;text-align:center;">Recommendations — the final written finding backed by the ranked data</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Output</div>
+    <h2>Results and Findings</h2>
+    <p>BUSINESS emerged as the highest-risk category overall, driven by the lowest average rating (2.59), the steepest abandonment rate (36.77%), and a high negative review share (16.4%). GAME showed the single highest negative-review rate of any category (38.28%), but its stronger rating (4.10) and much lower abandonment (4.19%) kept its overall risk in check, suggesting its complaints reflect narrower friction points rather than fundamental product failure.</p>
+    <p>Apps last updated in 2018 rated 15% higher on average than apps last updated in 2016, pointing to update recency as a leading indicator of app quality.</p>
+
+    <div class="finding-note">
+      <p>Recommendation: prioritize a full quality-and-retention audit for BUSINESS first, since it is the only category failing on all three risk dimensions simultaneously, while treating GAME's sentiment spike as a narrower, targeted fix.</p>
+    </div>
+
+    <div class="tags">
+      <span class="tag">SQL</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Risk Scoring</span>
+      <span class="tag">Sentiment Analysis</span>
+      <span class="tag">Data Cleaning</span>
+    </div>
+    <a href="https://github.com/drashtiashishkadakia/playstore-product-health-analysis" target="_blank" class="github-link">View Code on GitHub →</a>
+  </div>
+</div>
+<footer><p>© 2026 Drashti Ashish Kadakia</p></footer>
+</body>
+</html>
